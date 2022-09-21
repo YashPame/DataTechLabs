@@ -1,5 +1,12 @@
 import { useState } from "react";
 import './Navbar.css';
+
+import Progress from "./Components/Progress";
+import Analytics from "./Components/Analytics";
+import Dashboard from "./Components/Dashboard";
+
+import {Route, Routes, Link} from "react-router-dom";
+
 function Navbar() {
 
     const [nav, setnav] = useState(true );
@@ -8,6 +15,7 @@ function Navbar() {
         setnav(!nav);
     }
     return (
+        <>
         <nav className={nav ? "sidebar close"
             : "sidebar"}>
             <header>
@@ -26,28 +34,28 @@ function Navbar() {
                     </li>
                     <ul className="menu-links">
                         <li className="nav-link">
-                            <a href="#">
+                            <Link to="/dashboard">
                                 <i className='bx bx-home-alt icon'></i>
                                 <span className="text nav-text">Dashboard</span>
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-link">
-                            <a href="#">
+                            <Link to="/progress">
                                 <i className='bx bx-bar-chart-alt-2 icon'></i>
                                 <span className="text nav-text">Progress</span>
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-link">
-                            <a href="#">
+                            <Link to="/analytics">
                                 <i className='bx bx-pie-chart-alt icon'></i>
                                 <span className="text nav-text">Analytics</span>
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>
                 <div className="bottom-content">
                     <li className="">
-                        <a href="#">
+                        <a href="/">
                             <i className='bx bx-log-out icon'></i>
                             <span className="text nav-text">Logout</span>
                         </a>
@@ -55,6 +63,12 @@ function Navbar() {
                 </div>
             </div>
         </nav>
+        <Routes>
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/progress" element={<Progress />} />
+            <Route path="/analytics" element={<Analytics />} />
+        </Routes>
+        </>
     );
 }
 
