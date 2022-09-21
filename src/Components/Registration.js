@@ -4,8 +4,9 @@ import './Registration.css'
 function Registration() {
   return (
     <>
-      <form action="action_page.php">
+      <form action="">
         <div className="container">
+
           <h1>Register</h1>
           <p>Please fill in this form to create an account.</p>
           <hr />
