@@ -4,8 +4,8 @@ import Navbar from "../Navbar";
 function Dashboard() {
   return (
     <div>
-    <Navbar />
-    <p>Dashboard Dashboard Dashboard Dashboard Dashboard Dashboard Dashboard Dashboard Dashboard Dashboard Dashboard</p>
+    {/* <Navbar /> */}
+    <h1>AI Assessment Dashboard Page</h1>
     </div>
   );
 }

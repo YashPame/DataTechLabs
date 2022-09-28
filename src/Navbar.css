@@ -1,42 +1,11 @@
-/* Google Font Import - Poppins */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
 
-:root{
-    /* ===== Colors ===== */
-    --body-color: #8c52ff;
-    --sidebar-color: #FFF;
-    --primary-color: #695CFE;
-    --primary-color-light: #F6F5FF;
-    --toggle-color: #DDD;
-    --text-color: #707070;
-
-    /* ====== Transition ====== */
-    --tran-03: all 0.2s ease;
-    --tran-03: all 0.3s ease;
-    --tran-04: all 0.3s ease;
-    --tran-05: all 0.3s ease;
-}
-
-body{
+.navbar{
     min-height: 100vh;
     background-color: var(--body-color);
     transition: var(--tran-05);
 }
-
-::selection{
-    background-color: var(--primary-color);
-    color: #fff;
-}
-
-
-
-/* ===== Sidebar ===== */
  .sidebar{
     position: fixed;
     top: 0;
@@ -52,7 +21,6 @@ body{
     width: 88px;
 }
 
-/* ===== Reusable code - Here ===== */
 .sidebar li{
     height: 50px;
     list-style: none;
@@ -88,7 +56,6 @@ body{
 .sidebar.close .text{
     opacity: 0;
 }
-/* =========================== */
 
 .sidebar header{
     position: relative;
@@ -99,14 +66,14 @@ body{
     display: flex;
     flex-direction: column;
 }
-header  .name {
+nav header  .name {
     margin-top: 2px;
     font-size: 18px;
     font-weight: 600;
     text-align: center;
 }
 
-header  .profession{
+nav header  .profession{
     font-size: 16px;
     margin-top: -2px;
     display: block;

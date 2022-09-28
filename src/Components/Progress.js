@@ -4,8 +4,8 @@ import Navbar from "../Navbar";
 function Progress() {
   return (
     <div>
-    <Navbar />
-    <p>Progress Progress Progress Progress Progress Progress Progress Progress Progress Progress Progress Progress</p>
+    <h1>AI Assessment Progress Page</h1>
+    {/* <Navbar /> */}
     </div>
   );
 }

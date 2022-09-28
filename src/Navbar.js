@@ -4,6 +4,7 @@ import './Navbar.css';
 import Progress from "./Components/Progress";
 import Analytics from "./Components/Analytics";
 import Dashboard from "./Components/Dashboard";
+import Profile from "./Components/Profile";
 
 import {Route, Routes, Link} from "react-router-dom";
 
@@ -15,7 +16,7 @@ function Navbar() {
         setnav(!nav);
     }
     return (
-        <>
+        <div className="navbar">
         <nav className={nav ? "sidebar close"
             : "sidebar"}>
             <header>
@@ -51,6 +52,12 @@ function Navbar() {
                                 <span className="text nav-text">Analytics</span>
                             </Link>
                         </li>
+                        <li className="nav-link">
+                            <Link to="/profile">
+                                <i className='bx bx-user icon'></i>
+                                <span className="text nav-text">Profile</span>
+                            </Link>
+                        </li>
                     </ul>
                 </div>
                 <div className="bottom-content">
@@ -63,12 +70,8 @@ function Navbar() {
                 </div>
             </div>
         </nav>
-        <Routes>
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/progress" element={<Progress />} />
-            <Route path="/analytics" element={<Analytics />} />
-        </Routes>
-        </>
+        
+        </div>
     );
 }
 
